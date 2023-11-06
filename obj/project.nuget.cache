@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "4m/si32P0oI3lnOFQs/6P0tkAjbmTMaQCY8Ao+cNGFFquMu89j/DJ1uFSAfmb9pZw197pK/LnbDr45P7scp9Zg==",
+  "success": true,
+  "projectFilePath": "C:\\Catedras_facultad\\TallerDeLenguajes\\tl2-tp9-2023-Tadeo-AR26\\tl2-tp9-2023-Tadeo-AR26.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tadem\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
+    "C:\\Users\\tadem\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\tadem\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\tadem\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\tadem\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\tadem\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\tadem\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
