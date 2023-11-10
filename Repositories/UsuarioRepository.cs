@@ -3,20 +3,18 @@ using espacioKanban;
 namespace espacioRepositories;
 
 public class UsuarioRepository : IUsuarioRepository{
-    private string cadenaConexion = "Data source DB/kanban.db;CacheShared";
+    private string cadenaConexion = "Data source=DB/kanban.db;Cache=Shared";
 
-    public bool CreateUsuario(Usuario usuario){
-        var result = false;
+    public Usuario CreateUsuario(Usuario usuario){
         var queryString = @"Insert INTO usuario (nombre_de_usuario) VALUES(@nombre);";
         using(SQLiteConnection connection = new SQLiteConnection(cadenaConexion)){
             var command = new SQLiteCommand(queryString, connection);
             connection.Open();
-            command.Parameters.Add(new SQLiteParameter("@nombre", usuario.Id));
+            command.Parameters.Add(new SQLiteParameter("@nombre", usuario.NombreUsuario));
             command.ExecuteNonQuery();
             connection.Close();
-            result = true;
         }
-        return result;
+        return usuario;
     }
 
     public List<Usuario> GetAllUsuarios(){
@@ -44,7 +42,7 @@ public class UsuarioRepository : IUsuarioRepository{
         var user = new Usuario();
         var command = connection.CreateCommand();
         command.CommandText = "SELECT * FROM usuario WHERE id_usuario = @id;";
-        command.Parameters.Add(new SQLiteParameter("@idDirector", id));
+        command.Parameters.Add(new SQLiteParameter("@id", id));
 
         connection.Open();
         using(SQLiteDataReader reader = command.ExecuteReader()){
@@ -71,18 +69,16 @@ public class UsuarioRepository : IUsuarioRepository{
         return result;
     }
 
-    public bool UpdateUsuario(Usuario usuario){
-        var result = false;
+    public Usuario UpdateUsuario(Usuario usuario, int id){
         var queryString = @"UPDATE usuario SET nombre_de_usuario = @nombre WHERE id_usuario = @id;";
         using(SQLiteConnection connection = new SQLiteConnection(cadenaConexion)){
             var command = new SQLiteCommand(queryString, connection);
             connection.Open();
             command.Parameters.Add(new SQLiteParameter("@nombre", usuario.NombreUsuario));
-            command.Parameters.Add(new SQLiteParameter("@id", usuario.Id));
+            command.Parameters.Add(new SQLiteParameter("@id", id));
             command.ExecuteNonQuery();
             connection.Close();
-            result = false;
         }
-        return result;
+        return usuario;
     }
 }

@@ -4,7 +4,7 @@ namespace espacioRepositories;
 public interface IUsuarioRepository{
     public List<Usuario> GetAllUsuarios();
     public Usuario GetUsuarioByID(int id);
-    public bool CreateUsuario(Usuario usuario);
+    public Usuario CreateUsuario(Usuario usuario);
     public bool RemoveUsuario(int id);
-    public bool UpdateUsuario(Usuario usuario);
+    public Usuario UpdateUsuario(Usuario usuario, int id);
 }
